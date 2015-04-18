@@ -37,7 +37,7 @@ router.post('/weixin', function (req, res, next) {
             createtime:12345678
         }
     }
-    var messXml = builder.buildObject(mess)
+    var messXml = builder.buildObject(messXml)
     console.log(messXml)
     res.send(messXml)
 })
