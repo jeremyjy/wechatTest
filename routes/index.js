@@ -27,6 +27,7 @@ router.get('/weixin', function (req, res, next) {
     }
 })
 router.post('/weixin', function (req, res, next) {
+    console.log(req.body)
         api.sendText(req.body.fromusername, 'welcome!', function (err, result) {
             if(err)
             console.log(err)
