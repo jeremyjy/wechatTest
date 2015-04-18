@@ -5,7 +5,7 @@ var api = new wechatApi('wx302ca370b5b95750', 'ce440bc4efc9f6ebe37d3380440a8745'
 var crypto = require('crypto')
 var xml2Json = require('xml2js')
 var builder = new xml2Json.Builder()
-var wechat = require('wechat')
+//var wechat = require('wechat')
 
 /* GET home page. */
 
