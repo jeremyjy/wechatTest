@@ -5,7 +5,7 @@ var api = new wechatApi('wx302ca370b5b95750', 'ce440bc4efc9f6ebe37d3380440a8745'
 var crypto = require('crypto')
 var xml2Json = require('xml2js')
 var builder = new xml2Json.Builder()
-
+var wechat = require('wechat')
 
 /* GET home page. */
 
@@ -34,10 +34,12 @@ router.post('/weixin', function (req, res, next) {
             fromeusername:res.body.xml.tousername,
             msgtype:'text',
             content:'welcome',
-            createtime:new Date().getTime()
+            createtime:12345678
         }
     }
-    res.send(builder.buildObject(mess))
+    var messXml = builder.buildObject(mess)
+    console.log(messXml)
+    res.send(messXml)
 })
 
 module.exports = router;
